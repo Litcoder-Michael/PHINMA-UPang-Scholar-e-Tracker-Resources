@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="MainPageSuperAdminAccount.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MainPageOfSuperAdminAccount</title>
+    </head>
+
+    <body>
+        <h1>OIC of Guidance and Retention Unit</h1>
+
+        <div name="menubox" id="menubox">
+            <a href="AddScholarStudentPage.html">
+            <button type="button" name="AddScholarStudent" id="AddScholarStudent">Add Scholar Student</button></a>
+
+            <a href="ReceivedDTRs.html">
+            <button type="button" name="ReceivedDTRs" id="ReceivedDTRs">Received DTRs</button></a>
+
+            <a href="ScheduleRenewal.html">
+            <button type="button" name="ScholarshipRenewal" id="ScholarshipRenewal">Scholarship Renewal</button></a>
+
+        </div>
+
+        <button type="button" name="logoutbtn" id="logoutbtn" onclick="logoutbtn()">Log out</button>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <script src="auth.js"></script>
+        <script>
+            firebase.auth().onAuthStateChanged(function(user){
+                  if (!user) {
+                    window.location.href = "SuperAdminAccount.html";
+                  } else {
+                      //window.alert("Error login");
+
+                  }
+            })
+        </script>
+    </body>
+</html>

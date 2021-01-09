@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SuperAdminAccount</title>
+        <link rel="stylesheet" href="SuperAdminAccountStyle.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>OIC of Guidance and Retention Unit</h1>
+
+        <h2>PHINMA-University of Pangasinan</h2>
+
+        <h3>CENTER FOR STUDENT AND DEVELOPMENT LEADERSHIP</h3>
+
+        <div id="LogInBox">
+
+            <input type="text" name="emailfield" id="emailfield" placeholder="Email"></input>
+            <input type="password" name="passwordfield" id="passwordfield" placeholder="Password"></input>
+            <button type="button" name="LogInButton" id="LogInButton" onclick="LogInButton()">Log in</button>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> 
+        
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <script src="auth.js"></script>
+        <script>
+            firebase.auth().onAuthStateChanged(function(user){
+                  if (user) {
+                          window.location.href = "MainPageSuperAdminAccount.html";
+                  } else {
+                      //window.alert("Error login");
+
+                  }
+            })
+        </script>
+    </body>
+</html>

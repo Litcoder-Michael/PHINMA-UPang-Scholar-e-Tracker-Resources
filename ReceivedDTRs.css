@@ -1,0 +1,52 @@
+h1{
+    font-size: calc(1px + 3vw);
+    text-align: left;
+    padding-left: 13px;
+    border: solid  #666600;
+    height: 7vw;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: -8px;
+    padding-top: 2vw;
+    background-color: #008000;
+    color: white;
+}
+
+#FirstSemSecondSem{
+    border: solid black;
+    border-radius: 30px;
+    height: 40vw;
+    width: 50%;
+    margin-left: 25vw;
+    background-color: skyblue;
+    ;
+}
+
+#FirstSemButton{
+    height: 15vw;
+    width: 17vw;
+    position: absolute;
+    font-size: 2vw;
+    border: solid black 5px;
+    border-radius: 20px;
+    font-family: Courier;
+    background-color: grey;
+    color: white;
+    margin-left: 7vw;
+    margin-top: 10vw;
+}
+
+#SecondSemButton{
+    height: 15vw;
+    width: 17vw;
+    position: absolute;
+    font-size: 2vw;
+    border: solid black 5px;
+    border-radius: 20px;
+    font-family: Courier;
+    background-color: grey;
+    color: white;
+    margin-left: 26vw;
+    margin-top: 10vw;
+
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EditAccount</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+       .editingaccount{
+            background-color: #008000; 
+            height:45vw;
+            width: 50vw; 
+            margin-left: 25vw; 
+            margin-top: 11vw;
+            position: absolute;
+            border: solid #4d4d00;
+            border-radius: 20px;
+            position: absolute;
+        }
+    </style>
+
+    </style>
+
+    <body onload="OnLoadManageAccount()" style="background-color:#a3c2c2;">
+
+        <div id="header" style="height: 10vw; width: 100vw; position: absolute; margin-left: -8px; margin-top: -8px; background-color:#008000; border: solid #666600;">
+            <p style="color: white; padding-left: 3vw; margin-top: 2vw; font-size: 4vw; position: absolute;">Manage your Account</p>
+
+            <a href="about.html">
+            <button id="btnAbout" style="position: absolute; border: none; background-color: transparent; font-size: 3vw; font-family: Times New Roman; margin-left: 75vw; margin-top: 5vw; color: white; background-repeat: repeat; overflow: hidden;">About</button></a>
+
+            <a href="HelpManagingAccount.html">
+            <button id="btnHelp" style="position: absolute; border: none; background-color: transparent; font-size: 3vw; font-family: Times New Roman; margin-left: 85vw; margin-top: 5vw; color: white; background-repeat: repeat; overflow: hidden;">Help</button></a>
+            
+        </div>
+        
+        <div class="editingaccount">
+
+            <h4 style="text-align: center; margin-left:1vw; font-size: 3vw; margin-top: 2vw; color: white; font-family: Courier New;"><b>Edit your Account</b></h4>
+
+            <img src="UploadProfilePicture.png" id="output" style="height: 5vw; width: 5vw; position: absolute; margin-top: -4vw; margin-left: 22vw;"></img>
+            <input type="file" id="editfile"  accept="image/*" name="image" style="height: 3vw; width: 13.5vw; background-color:#006600; color: white; font-size: 1vw; margin-left: 17.5vw; margin-top: 1vw; position: absolute; ">
+
+            <label for="FirstNameInput" style="font-family: Arial; font-size: 1.5vw; margin-left: 7vw; color: white; margin-top: 4vw; position: absolute;">First Name</label>
+            <input type="text" id="editFirstNameInput" name="editFirstNameInput" style="height: 1.5vw; width: 25vw; margin-left: 15vw; margin-top: 4vw; border: solid black; border-radius: 30px; position: absolute;"></input>
+
+            <label for="MiddleNameInput" style="font-family: Arial; font-size: 1.5vw; margin-left: 6vw; color: white; margin-top: 7vw; position: absolute;">Middle Name</label>
+            <input type="text" id="editMiddleNameInput" name="editMiddleNameInput" style="height: 1.5vw; width: 25vw; margin-top: 7vw; margin-left: 15vw; border: solid black; border-radius: 30px;"></input>
+
+            <label for="LastNameInput" style="font-family: Arial; font-size: 1.5vw; margin-left: -33.1vw; color: white; position: absolute; margin-top: 10vw;">Last Name</label> 
+            <input type="text" id="editLastNameInput" name="editLastNameInput" style="height: 1.5vw; width: 25vw; margin-top: 1.2vw; margin-left: 15vw; border:solid black; border-radius: 30px;"></input>
+
+            <label for="Idnumber" style="font-family: Arial; font-size: 1.5vw; margin-left: -30vw; margin-top: 4vw; color: white; position:absolute;">ID no.</label>
+            <input type="text" id="editIdnumber" name="editIdnumber" style="height: 1.5vw; width :25vw; margin-top: 10px; border: solid black; border-radius: 30px; margin-left: 15vw;"></input>
+
+            <label for="email" style="font-family: Arial; font-size: 1.5vw;  margin-top: 3.5vw; margin-left: -30vw; color: white; position: absolute;">Email</label>
+            <input type="text" id="editsignup_email" name="editsignup_email" style="font-family: Arial; height: 1.5vw; width: 25vw; margin-top: 3.5vw; margin-left: -25.6vw; border: solid black; border-radius: 30px; position: absolute;"></input>
+
+            <label for="username" style="font-family: Arial; font-size: 1.5vw; margin-top: 6.4vw; margin-left: -33vw; color: white; position: absolute;">Username</label>
+            <input type="text" id="editusername" name="editusername" style="font-family: Arial; height: 1.5vw; width: 25vw; margin-top: 3.5vw; margin-left: 15vw; border: solid black; border-radius: 30px;"></input>
+
+            <label for="password" style="font-family: Arial; font-size: 1.5vw; margin-top: 6.5vw; margin-left: -32.6vw; color: white; position: absolute;">Password</label>
+            <input type="text" id="editsignup_password" name="editsignup_password" style="font-family: Arial; height: 1.5vw; width: 25vw; margin-top: 0.9vw; margin-left: 15vw; border: solid black; border-radius: 30px;"></input> 
+
+            <label for="department" style="font-family: Arial; font-size: 1.5vw; margin-top: 4vw; margin-left: -33.8vw; color: white; position: absolute;">Department</label>
+            <input type="text" id="editdepartment" name="editdepartment" style="font-family: Arial; height: 1.5vw; width: 25vw; margin-top: 0.9vw; margin-left: 15vw; border: solid black; border-radius: 30px;"></input>
+
+            <button onclick="manageSave()" style="position: absolute; height: 4vw; width: 10vw; margin-top: 5vw; margin-left: -20vw; font-size: 2vw; font-family: Courier; border-radius: 20px;">Save</button>
+        </div>
+
+        <div class="footer 2" style="background-color: black; height: 18vw; width: 100%; margin-left: -8px;
+        margin-top: 57vw; position: absolute; overflow: hidden; border-top-left-radius: 2vw; border-top-right-radius: 2vw; border: solid yellow; ">
+
+        <h4 style="color:white; font-size: 1.4vw; margin-left: 10vw; margin-top: 2vw; position: absolute;"><b>SERVICES</b></h4> 
+
+        <p style="color: white; margin-left: 1.1vw; margin-left: 5vw; margin-top: 6vw; position: absolute;">ONLINE DTR</p>
+
+        <p style="color: white; margin-left: 1.1vw; margin-left: 5vw; margin-top: 9vw; position: absolute;">SCHOLARSHIP RENEWAL</p>
+
+        <p style="color: white; margin-left: 1.1vw; margin-left: 5vw; margin-top: 12vw; position: absolute;">RECORD TRACKER</p>
+
+        <h4 style="color: white; font-size: 1.4vw; margin-left: 45vw; margin-top: 2vw; position: absolute;">DEPARTMENTS</h4>
+
+        <a href="https://www.facebook.com/phinma.upang.citesc">
+            <p style="color: white; margin-left: 40vw; margin-top: 5vw; position: absolute;">CITE</p></a>
+
+        <a href="https://www.facebook.com/chssc.upang">
+            <p style="color: white; margin-left: 40vw; margin-top: 9vw; position: absolute;">CHS</p></a>
+
+        <a href="https://www.facebook.com/groups/phinmaupangcssstudentcommunity">
+            <p style="color: white; margin-left: 49vw; margin-top: 5vw; position: absolute;">CSS</p></a>
+
+        <a href="https://www.facebook.com/Phinma-University-of-Pangasinan-College-of-Engineering-and-Architecture-882598705162726">
+            <p style="color: white; margin-left: 49vw; margin-top: 9vw; position: absolute">CEA</p></a>
+
+        <a href="https://www.facebook.com/PHINMAUPang.CMAStudentCouncil">
+            <p style="color: white; margin-left: 58vw; margin-top: 5vw; position: absolute;">CMA</p></a>
+
+        <a href="https://www.facebook.com/phinmaupangcassc">
+        <p style="color: white; margin-left: 58vw; margin-top: 9vw; position: absolute;">CAS</p></a>
+
+        <h4 style="font-size: 1.4vw; color: white; margin-left: 83vw; margin-top: 2vw; position: absolute;">REACH US:</h4>
+
+        <a href="https://www.facebook.com/phinmaupang">
+        <img src="FacebookLogo.png" style="height: 2.5vw; width: 2.5vw; position: absolute;
+        margin-left: 83vw; color: whitesmoke; margin-top: 5vw"></a>
+
+        <a href="https://www.instagram.com/phinmaupang/">
+        <img src="InstagramLogo.png" style="height: 3.9vw; width: 5.5vw; position: absolute;
+        margin-left: 84.5vw; margin-top: 4.3vw;"></a>   
+
+        <a href="https://twitter.com/phinmaupang?lang=en">
+        <img src="TwitterLogo.png" style="height: 4.6vw; width: 4vw; position:
+        absolute; margin-left: 88.2vw; margin-top: 4vw;"></a>
+
+        <a href="mailto:info@up.phinma.edu.ph">
+        <img src="GmailLogo.png" style="height: 2.6vw; width: 2.6vw; margin-top: 5vw;
+        margin-left: 92vw; margin-top: 5vw; position: absolute;"></a>
+
+        <p style="color: white; font-size: 1.6vw; margin-left: 83vw; margin-top: 10vw; position: absolute;">You can call us at:<br>(075) 522 5635</p>
+
+        <p style="color: green; font-size: 1.2vw; text-align: center; margin-top: 13vw; position: absolute; margin-left: 36.3vw;">PHINMA-University of Pangasinan<br>Arellano St., Dagupan City, Pangasinan, Philippines, 2400.</p>
+
+        <p style="color: #006600; font-size: 1.1vw; margin-top: 16.3vw; margin-left: 46vw; position: absolute;">Copyright &copy; 2020 </p>
+
+    </div>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>   
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+        <script src="crud.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script src="auth.js"></script> 
+        <script>
+            var userID = localStorage.getItem('userid');
+            var image = document.getElementById('output');
+            var storage = firebase.storage();
+            storage.ref('admin/' + userID).getDownloadURL().then(function(url) {
+            var imgUrl = url;
+            
+                image.src = imgUrl;
+            });
+        </script>
+    </body>
+</html>

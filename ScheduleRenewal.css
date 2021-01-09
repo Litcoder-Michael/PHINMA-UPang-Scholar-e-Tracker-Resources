@@ -1,0 +1,48 @@
+h1{
+    font-size: calc(1px + 3vw);
+    text-align: left;
+    padding-left: 13px;
+    border: solid  #666600;
+    height: 7vw;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: -8px;
+    padding-top: 2vw;
+    background-color: #008000;
+    color: white;
+}
+
+#AnnouncementBox{
+    border: solid black 5px;
+    border-radius: 20px;
+    height: 35vw;
+    width: 50vw;
+    margin-left: 24vw;
+    
+}
+
+#MessageAnnouncement{
+    margin-top: 2vw;
+    height: 30vw;
+    width: 45.5vw;
+    margin-left: 2vw;
+    border-radius: 20px;
+    font-family: 'Courier New';
+    font-size: 2vw;
+    text-align: left;
+    position: absolute;
+
+}
+
+#AnnounceButton{  
+    margin-top: 34.5vw;
+    margin-left: 17.5vw;
+    position: absolute;
+    height: 3vw;
+    width: 15vw;
+    font-size: 1.1vw;
+    border-radius: 20px;
+    border: solid black;
+    font-family: Courier ;
+    
+}
